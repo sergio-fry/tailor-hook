@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "tailor-hook"
   gem.homepage = "http://github.com/sergio-fry/tailor-hook"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{add tailor style-check to your hooks}
+  gem.description = %Q{pre-commit hook, that checks ruby-style}
   gem.email = "sergei.udalov@gmail.com"
   gem.authors = ["Sergei O. Udalov"]
   # dependencies defined in Gemfile
