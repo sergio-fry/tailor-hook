@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
   s.date = "2011-09-23"
   s.description = "pre-commit hook, that checks ruby-style"
   s.email = "sergei.udalov@gmail.com"
+  s.executables = ["tailor-hook-install"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -19,10 +20,15 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
+    "VERSION",
+    "bin/tailor-hook-install",
     "lib/tailor-hook.rb",
+    "pre-commit",
+    "tailor-hook.gemspec",
     "test/helper.rb",
     "test/test_tailor-hook.rb"
   ]
