@@ -1,6 +1,11 @@
 = tailor-hook
 
-Description goes here.
+This gem creates git pre-commit hook, that validates updated .rb files with Tailor gem.
+
+== Installation
+
+* Install "tailor-hook" gem
+* Run "tailor-hook-install" command inside your project path to add hook.
 
 == Contributing to tailor-hook
  

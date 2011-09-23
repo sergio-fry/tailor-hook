@@ -1,9 +1,12 @@
 #!/usr/bin/env ruby
 
 src_path = File.join(File.dirname(__FILE__), "../pre-commit")
-unless File.exists? ".git/hooks/pre-commit"
-`cp #{src_path} .git/hooks/pre-commit`
-else
+
+if !File.exist? ".git"
+  print "Error: can't find any .git here!\n"
+elsif File.exists? ".git/hooks/pre-commit"
   print "Error: file '.git/hooks/pre-commit' already exists!\n"
+else
+  `cp #{src_path} .git/hooks/pre-commit`
 end
 
