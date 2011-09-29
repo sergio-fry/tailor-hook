@@ -1,4 +1,4 @@
-= tailor-hook
+= tailor-hook {<img src="http://travis-ci.org/sergio-fry/tailor-hook.png" />}[http://travis-ci.org/sergio-fry/tailor-hook]
 
 This gem creates git pre-commit hook to validate updated .rb files with Tailor gem.
 
