@@ -2,6 +2,8 @@
 
 This gem creates git pre-commit hook to validate updated .rb files with Tailor gem.
 
+TailorHook validates only staged files. Very handy. Just check it out!
+
 == Installation
 
 * Install "tailor-hook" gem

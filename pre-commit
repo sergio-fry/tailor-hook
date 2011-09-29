@@ -1,44 +1,7 @@
-#!/usr/bin/ruby
+#!/usr/bin/env ruby
 
-class TailorHook
-  LAST_LINE = "The following files are out of style"
+require 'tailor-hook'
 
-  def initialize
-    @errors = []
-  end
-
-  def hook!
-    ruby_files.each do |filename|
-      check_file(filename)
-    end
-
-    if @errors.empty?
-      exit 0
-    else
-      @errors.each { |e| print e }
-      exit 1
-    end
-  end
-
-  private
-
-  def check_file(filename)
-    output = `tailor #{filename}`
-
-    unless output.split("\n")[-1].include? LAST_LINE
-      @errors << output
-    end
-  end
-
-  def ruby_files
-    `git status -s`.split("\n").collect do |line|
-      filename = line.split[1]
-      filename if filename.match(/\.rb$/)
-    end.compact
-  end
-end
-
-hook = TailorHook.new
-hook.hook!
-
+hook = TailorHook::Hook.new(File.join(File.dirname(__FILE__), "../.."))
+exit hook.hook! # exit value
 

@@ -7,12 +7,17 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'test/unit'
+require 'minitest/spec'
+require 'minitest/autorun'
 require 'shoulda'
+require 'rr'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'tailor-hook'
 
-class Test::Unit::TestCase
+include TailorHook
+
+class MiniTest::Unit::TestCase
+  include RR::Adapters::MiniTest
 end
