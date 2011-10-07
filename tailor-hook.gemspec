@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "tailor-hook"
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sergei O. Udalov"]
-  s.date = "2011-09-29"
+  s.date = "2011-10-07"
   s.description = "pre-commit hook, that checks ruby-style"
   s.email = "sergei.udalov@gmail.com"
   s.executables = ["tailor-hook-install"]
@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rvmrc",
+    ".travis.yml",
     "Gemfile",
     "Gemfile.lock",
     "Guardfile",
