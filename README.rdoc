@@ -9,6 +9,17 @@ TailorHook validates only staged files. Very handy. Just check it out!
 * Install "tailor-hook" gem
 * Run "tailor-hook-install" command inside your project path to add the hook.
 
+== Configuratoin
+
+You can specify ignore list if you want to ignore some files, e.g. db/schema.rb. Edit your .git/hooks/pre-commit:
+ #!/usr/bin/env ruby
+
+ require 'tailor-hook'
+
+ hook = TailorHook::Hook.new(File.join(File.dirname(__FILE__), "../.."), 
+                             ["db/schema.rb"])
+ exit hook.hook! # exit value 
+
 == Contributing to tailor-hook
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
